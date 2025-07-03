@@ -29,6 +29,61 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Minimal modern UI for Notes frontend */
+.btn {
+  font-size: 16px;
+  padding: 0.6em 1.4em;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  background: #ffeb3b;
+  color: #222;
+  border: none;
+  cursor: pointer;
+  transition: background .14s, color .13s;
+  margin-left: 6px;
+}
+.btn:active {
+  filter: brightness(0.97);
+}
+.btn.outline {
+  background: #fff;
+  border: 1px solid #1976d2;
+  color: #1976d2;
+  margin-left: 0;
+}
+.btn.outline:hover {
+  background: #f0f0f9;
+  color: #0D3578;
+}
+.btn:hover:not(.outline) {
+  background: #e8bb05;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  background: #f9f9f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 9px;
+}
+
+@media (max-width: 900px) {
+  aside {
+    width: 80vw !important;
+    font-size: 15px;
+  }
+}
+@media (max-width: 550px) {
+  main {
+    padding: 0px !important;
+  }
+  aside {
+    display: none;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
